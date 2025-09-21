@@ -35,8 +35,8 @@ body {
   z-index: 1;
   top: 0;
   padding-bottom: 16px;
-  padding-top: 30px;
-  height: 87px;
+  padding-top: 16px;
+  height: 60px;
   display: flex;
   justify-content: space-between;
 }
@@ -70,17 +70,17 @@ body {
   width: 100%;
 }
 /* Main */
-.main {
+.one-section {
+  height: 600px;
   position: relative;
   background: url("../images/181340-porshe_964_zinger-porshe_911-porshe_912-porshe-legkovyye_avtomobili-3840x2160.jpg")
     no-repeat center;
   background-size: cover; /* ekranni to‘liq to‘ldiradi */
-  height: 10vh;
+
   background-size: 1700px 600px; /* balandlik bermasa ko‘rinmaydi */
 }
 .one-section h1 {
-  padding-top: 100px;
-  padding-bottom: 250px;
+  padding-top: 150px;
 }
 /* Sarlavha markazda chiqadi */
 .two-section h1 {
