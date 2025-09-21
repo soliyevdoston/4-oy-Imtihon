@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Rubik+Burned&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Nosifer&display=swap");
 * {
   padding: 0;
   margin: 0;
@@ -79,8 +81,32 @@ body {
 
   background-size: 1700px 600px; /* balandlik bermasa ko‘rinmaydi */
 }
+.one-section button {
+  border-radius: 8px;
+  padding: 5px 12px;
+  background: linear-gradient(to right, rgb(22, 204, 98), rgb(1, 32, 9));
+  color: white;
+  font-size: 26px;
+  margin: 30px 60px;
+}
+.one-section button:active {
+  border-radius: 8px;
+  padding: 5px 12px;
+  background: linear-gradient(to right, rgb(1, 14, 6), rgb(17, 194, 61));
+  color: white;
+  font-size: 20px;
+}
+mark {
+  background-color: lightgreen; /* fon rangi */
+  color: black; /* matn rangi */
+  padding: 2px 6px;
+  border-radius: 4px;
+}
 .one-section h1 {
-  padding-top: 150px;
+  padding-top: 90px;
+  font-family: "Nosifer";
+  color: white;
+  font-size: 40px;
 }
 /* Sarlavha markazda chiqadi */
 .two-section h1 {
