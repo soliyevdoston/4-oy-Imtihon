@@ -3,7 +3,6 @@ import { cars as initialCars } from "./data.js";
 const elBtn = document.getElementById("btn");
 const elRoyhat = document.getElementById("royhat");
 const elModal = document.getElementById("modal1");
-const elModalQoshish = document.getElementById("modal-qoshish");
 const elBatafsil = document.getElementById("batafsil");
 const elBatafsilMalumot = document.getElementById("batafsil-malumot");
 const elModalOchish = document.getElementById("modalochish");
@@ -112,11 +111,11 @@ function modalochish(id) {
 }
 window.batafsil = modalochish;
 
-function generateId() {
+function randomId() {
   return Math.floor(Math.random() * 1000000);
 }
 
-function newCar(id = generateId()) {
+function newCar(id = randomId()) {
   return {
     id,
     name: inputNomi.value,
