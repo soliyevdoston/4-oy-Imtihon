@@ -4,20 +4,19 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>The Best Car</title>
-    <link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <link rel="shortcut icon" href="/favicon.ico" />
-    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
-    <meta name="apple-mobile-web-app-title" content="MyWebSite" />
-    <link rel="manifest" href="/site.webmanifest" />
     <link rel="stylesheet" href="css/style.css" />
   </head>
   <body>
     <header class="header container">
       <div class="img1">
-        <a href="index.html"
-          ><img src="images/загруженное.svg" alt="" width="200px"
-        /></a>
+        <a href="index.html">
+          <img
+            class="icon-img"
+            src="images/загруженное.svg"
+            alt=""
+            width="200px"
+          />
+        </a>
       </div>
       <nav>
         <ul class="header-links">
@@ -27,40 +26,87 @@
           <li><a class="header-link" href="">Etirozlar</a></li>
         </ul>
       </nav>
-      <div>
-        <img src="images/wifi-fade.svg" alt="" width="40px" height="40px" />
-        <img
-          id="btn"
-          src="images/awake.svg"
-          alt=""
-          width="40px"
-          height="40px"
-        />
+      <div class="icon">
+        <div>
+          <img
+            id="modalochish"
+            src="images/car_repair_16784.png"
+            alt=""
+            width="40px"
+            height="40px"
+          />
+        </div>
+        <div>
+          <img
+            class="wifi"
+            src="images/wifi-fade.svg"
+            alt=""
+            width="40px"
+            height="40px"
+          />
+        </div>
+        <div>
+          <img
+            id="btn"
+            src="images/awake.svg"
+            alt=""
+            width="40px"
+            height="40px"
+          />
+        </div>
       </div>
     </header>
+
     <main class="main container">
       <section class="one-section">
         <h1>
           <mark>The Best Car</mark> <br />
           Orzular jamlanmasi.
         </h1>
+        <p class="text">
+          Har bir avtomobil – sifat, qulaylik va ishonchlilik ramzi. Biz sizga
+          zamonaviy dizayn, yuqori darajadagi qulaylik va orzuingizdagi tezlikni
+          taqdim etamiz. Hayotingizni yangi bosqichga olib chiqadigan mashinani
+          tanlang va orzularingizni bugunyoq ro‘yobga chiqaring!
+        </p>
         <button>Malumot olish</button>
       </section>
+
       <section class="two-section">
         <h1>The Best Cars</h1>
 
         <div>
-          <ul id="carsContainer">
-            <li>BMW</li>
-            <li>Mercedes</li>
-            <li>Audi</li>
-            <li>Lexus</li>
-            <li>Tesla</li>
-          </ul>
+          <ul id="royhat"></ul>
         </div>
       </section>
     </main>
+
+    <div id="modal1" class="modal">
+      <div class="modal2">
+        <h2>Yangi mashina qo'shish</h2>
+
+        <div id="modal-qoshish">
+          <label>Nomi: <input type="text" id="nomi" /></label><br /><br />
+          <label>Davlati: <input type="text" id="country" /></label><br /><br />
+          <label>Turkumi: <input type="text" id="turkumi" /></label><br /><br />
+          <label>Rangi (nomi): <input type="color" id="color" /></label
+          ><br /><br />
+          <label>Tavsif: <textarea id="fikr" rows="3"></textarea></label
+          ><br /><br />
+        </div>
+        <div id="batafsil" style="display: none">
+          <div id="batafsil-malumot"></div>
+          <div style="margin-top: 10px"></div>
+        </div>
+        <div style="margin-top: 12px">
+          <button id="saqlash">Saqlash</button>
+          <button id="modal-yopish">Yopish</button>
+        </div>
+      </div>
+    </div>
+
     <footer class="footer container"></footer>
+
     <script src="js/app.js" type="module"></script>
   </body>
 </html>

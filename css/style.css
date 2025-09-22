@@ -1,5 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Rubik+Burned&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Nosifer&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Delius+Swash+Caps&display=swap");
 * {
   padding: 0;
   margin: 0;
@@ -22,12 +23,23 @@ ul {
 .dark {
   background: linear-gradient(to right, rgb(0, 24, 10), rgb(1, 14, 4));
   color: white;
-  .header {
-    background: linear-gradient(to right, rgb(0, 24, 10), rgb(1, 14, 4));
-  }
 }
+
+.dark .header {
+  background: linear-gradient(to right, rgb(0, 24, 10), rgb(1, 14, 4));
+}
+
+.dark .modal2 {
+  background: black !important;
+  color: white !important;
+}
+.dark .car-item {
+  background: black !important;
+}
+
 body {
   background: linear-gradient(to right, rgb(64, 182, 113), rgb(1, 32, 9));
+  font-family: "Delius Swash Caps";
 }
 /* Header */
 .header {
@@ -55,7 +67,7 @@ body {
 }
 
 .header-link::after {
-  width: 0%s;
+  width: 0%;
   content: "";
   left: 0;
   bottom: -5px;
@@ -77,17 +89,30 @@ body {
   position: relative;
   background: url("../images/181340-porshe_964_zinger-porshe_911-porshe_912-porshe-legkovyye_avtomobili-3840x2160.jpg")
     no-repeat center;
-  background-size: cover; /* ekranni to‘liq to‘ldiradi */
-
-  background-size: 1700px 600px; /* balandlik bermasa ko‘rinmaydi */
+  background-size: cover;
+  background-size: 1700px 600px;
 }
 .one-section button {
+  font-family: "Delius Swash Caps";
   border-radius: 8px;
   padding: 5px 12px;
   background: linear-gradient(to right, rgb(22, 204, 98), rgb(1, 32, 9));
   color: white;
   font-size: 26px;
-  margin: 30px 60px;
+  margin: 60px 30px;
+}
+.text {
+  width: 100%;
+  border-radius: 12px;
+  font-size: 20px;
+  margin: 40px;
+  margin-left: 10px;
+  padding-left: 30px;
+  padding-right: 30px;
+  color: white;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
+    rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px,
+    rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
 }
 .one-section button:active {
   border-radius: 8px;
@@ -97,46 +122,139 @@ body {
   font-size: 20px;
 }
 mark {
-  background-color: lightgreen; /* fon rangi */
-  color: black; /* matn rangi */
+  background-color: lightgreen;
+  color: black;
   padding: 2px 6px;
   border-radius: 4px;
 }
 .one-section h1 {
+  width: 100%;
+  padding-left: 30px;
   padding-top: 90px;
   font-family: "Nosifer";
   color: white;
   font-size: 40px;
 }
-/* Sarlavha markazda chiqadi */
-.two-section h1 {
-  font-size: 24px;
-  font-weight: bold;
-  text-align: center;
-  margin: 20px 0;
-}
+
 /* section2 */
-/* Sarlavha markazda chiqadi */
+.two-section {
+  padding-top: 40px;
+}
+.header2 {
+  position: sticky;
+  top: 0;
+  padding-bottom: 16px;
+  padding-top: 16px;
+  height: 60px;
+  display: flex;
+  justify-content: space-between;
+}
 .two-section h1 {
-  font-size: 24px;
+  font-size: 50px;
   font-weight: bold;
   text-align: center;
   margin: 20px 0;
-}
-/* Ro‘yxatni yonma-yon qilish */
-#carsContainer {
-  display: flex;
-  flex-wrap: wrap; /* joy yetmasa pastga tushadi */
-  gap: 15px; /* oraliq */
-  justify-content: center;
-  list-style: none; /* nuqtalarni olib tashlaydi */
-  padding: 0;
-  margin: 0;
 }
 
-#carsContainer li {
-  background: #f0f0f0; /* fon rangi */
-  padding: 10px 20px;
-  border-radius: 8px;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+#royhat {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  list-style: none;
+  padding: 0;
+  margin: 20px 0;
+}
+
+#royhat li {
+  flex: 1 1 220px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  padding: 12px;
+  background: #f9f9f9;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+#royhat li a {
+  display: block;
+  font-size: 18px;
+  margin-bottom: 6px;
+}
+
+#royhat li button {
+  margin-right: 6px;
+  padding: 4px 8px;
+  border: none;
+  border-radius: 5px;
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.modal2 {
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  min-width: 320px;
+  max-width: 90%;
+  max-height: 90%;
+}
+@media (max-width: 900px) {
+  .header-links {
+    display: none;
+  }
+  .one-section h1 {
+    font-size: 30px;
+  }
+  .one-section button {
+    font-size: 20px;
+  }
+}
+@media (max-width: 560px) {
+  .text {
+    font-size: 15px;
+  }
+  .one-section button {
+    margin: 20px 30px;
+    font-size: 15px;
+  }
+  @media (max-width: 420px) {
+    .icon-img {
+      width: 150px;
+    }
+  }
+}
+@media (max-width: 380px) {
+  .one-section h1 {
+    font-size: 20px;
+  }
+  .one-section button {
+    margin: 15px 30px;
+    font-size: 10px;
+    padding: 10px 10px;
+  }
+  .text {
+    font-size: 15px;
+    padding: 10px 10px;
+  }
+  .wifi {
+    display: none;
+  }
+  .icon {
+    gap: 10px;
+  }
+}
+.icon {
+  display: flex;
+  gap: 30px;
 }
