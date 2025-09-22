@@ -30,7 +30,6 @@ elBtn.addEventListener("click", () => {
 let cars = JSON.parse(localStorage.getItem("cars_data")) || initialCars;
 
 let tahrirlashId = null;
-let batafsilId = null;
 
 function royhatChiqarish() {
   elRoyhat.innerHTML = "";
@@ -67,9 +66,6 @@ function royhatChiqarish() {
 }
 // modal
 elModalOchish.addEventListener("click", () => {
-  tahrirlashId = null;
-  elModalQoshish.style.display = "block";
-  elSaqlash.style.display = "inline-block";
   elModal.style.display = "grid";
 });
 elModalYopish.addEventListener("click", () => {
@@ -79,8 +75,6 @@ function openEditModal(id) {
   const car = cars.find((el) => el.id === id);
   if (!car) return;
   tahrirlashId = id;
-  elModalQoshish.style.display = "block";
-  elSaqlash.style.display = "inline-block";
   inputNomi.value = car.name;
   inputCountry.value = car.country;
   inputTurkum.value = car.category;
