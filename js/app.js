@@ -27,7 +27,7 @@ elBtn.addEventListener("click", () => {
   }
 });
 // localstorage
-let cars = JSON.parse(localStorage.getItem("cars_data"));
+let cars = JSON.parse(localStorage.getItem("cars_data") || initialCars);
 let tahrirlashId = null;
 let batafsilId = null;
 
