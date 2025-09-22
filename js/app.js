@@ -93,11 +93,7 @@ window.edit = openEditModal;
 function modalochish(id) {
   const car = cars.find((el) => el.id === id);
   if (!car) return;
-  batafsilId = id;
-  tahrirlashId = null;
-  elModalQoshish.style.display = "none";
-  elBatafsil.style.display = "block";
-  elSaqlash.style.display = "none";
+
   elBatafsilMalumot.innerHTML = `
     <p><b>Nomi:</b> ${car.name}</p>
     <p><b>Trim:</b> ${car.trim}</p>
@@ -114,13 +110,19 @@ function modalochish(id) {
     <p><b>Yoqilg'i (city/highway/combined):</b> ${car.fuelConsumption}</p>
     <p><b>Mamlakat:</b> ${car.country}</p>
     <p><b>Tavsif:</b> ${car.description}</p>
+    
   `;
+  elBatafsil.style.display = "block";
 
   elModal.style.display = "grid";
 }
 window.batafsil = modalochish;
 
-function newCar(id = Date.now()) {
+function generateId() {
+  return Math.floor(Math.random() * 1000000);
+}
+
+function newCar(id = generateId()) {
   return {
     id,
     name: inputNomi.value,
@@ -133,8 +135,7 @@ function newCar(id = Date.now()) {
 
 elSaqlash.addEventListener("click", () => {
   const index = cars.findIndex((el) => el.id === tahrirlashId);
-
-  if (index !== -1) {
+  if (index >= 0) {
     cars[index] = newCar(tahrirlashId);
   } else {
     cars.push(newCar());
@@ -143,11 +144,4 @@ elSaqlash.addEventListener("click", () => {
   elModal.style.display = "none";
 });
 
-function tozalash() {
-  inputNomi.value = "";
-  inputCountry.value = "";
-  inputTurkum.value = "";
-  inputColor.value = "";
-  inputFikr.value = "";
-}
 royhatChiqarish();
